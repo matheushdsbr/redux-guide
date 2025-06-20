@@ -53,6 +53,10 @@ export const ProductImage = styled.div`
     }
   }
 
+  :active {
+    opacity: 0.8;
+   }
+
   @media (max-width: 768px) {
     width: 100%;
   }
