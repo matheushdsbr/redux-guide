@@ -12,6 +12,7 @@ function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.userReducer.user);
+  const products = useSelector((state) => state.cartReducer.products);
 
   const handleCartClick = () => {
     setCartIsVisible(true);
@@ -35,7 +36,7 @@ function Header() {
           <div onClick={handleLogout}>{user.name} - Logout</div>) : (
           <div onClick={handleLogin}>Login</div>)
         }
-        <div onClick={handleCartClick}>Carrinho</div>
+        <div onClick={handleCartClick}>Carrinho {products.length > 0 && products.length}</div>
       </Styles.Buttons>
 
       <Cart isVisible={cartIsVisible} setIsVisible={setCartIsVisible} />
