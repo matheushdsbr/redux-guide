@@ -6,7 +6,7 @@ import Cart from "../cart/index";
 // Styles
 import * as Styles from "./styles";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../../redux/user/slice";
+import { login, logout } from "../../redux/user/slice";
 
 function Header() {
   const [cartIsVisible, setCartIsVisible] = useState(false);
@@ -26,7 +26,7 @@ function Header() {
   };
 
   const handleLogout = () => {
-    dispatch(login());
+    dispatch(logout());
   };
   return (
     <Styles.Container>
