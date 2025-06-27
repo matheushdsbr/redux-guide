@@ -20,16 +20,13 @@ export const Logo = styled.div`
 export const Buttons = styled.div`
   display: flex;
   align-items: center;
+  gap: 40px;
 
   div {
     font-weight: 500;
 
     &:hover {
       cursor: pointer;
-    }
-
-    &:nth-child(1) {
-      margin-right: 40px;
     }
   }
 `;
